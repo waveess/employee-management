@@ -1,12 +1,17 @@
-// const sqlite3 = require('sqlite3');
+// //importing mysql2
+// import mysql from 'mysql2';
+// import dotenv from 'dotenv';
+// dotenv.config();
 
-// //connect to database
-// const db = new sqlite3.Database('./db/employee.db', (err) => {
-//     if(err) {
-//         return console.error(err.message);
-//     }
 
-//     console.log('Connected to the employee database.')
+// // create the connection to database
+// const db = mysql.createConnection({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.MYSQL_PASSWORD,
+//     database: 'employees'
 // });
 
+
+// //exporting the module to the main server.js file
 // module.exports = db;

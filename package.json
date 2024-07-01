@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "migrate": "sqlite3 db/employee.db < db/schema.sql",
-    "seed": "sqlite3 db/employee.db < db/seeds.sql",
-    "db": "sqlite3 db/employee.db",
+    "migrate": "mysql -u rawanfatima -p employees < db/schema.sql",
+    "seed": "mysql -u rawanfatima -p employees < db/seeds.sql",
+    "db": "mysql db/employees",
     "start": "node server.js"
   },
   "repository": {
@@ -21,14 +21,13 @@
     "url": "https://github.com/waveess/employee-management/issues"
   },
   "homepage": "https://github.com/waveess/employee-management#readme",
+  "type": "module",
   "dependencies": {
     "console.table": "^0.10.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "inquirer": "^8.1.5",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.0",
-    "nodemon": "^2.0.13",
-    "verbose": "^0.2.3"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "inquirer": "^9.3.0",
+    "mysql2": "^3.10.1",
+    "sqlite3": "^5.1.7"
   }
 }
